@@ -10,16 +10,20 @@ El proyecto se centra en centralizar la información de jugadores, entrenamiento
 - Mejorar la capacidad de generar reportes financieros y análisis operativos.
 
 ## Contenidos del Repositorio
-- `IdeaDAmelio.sql`: Contiene el script SQL para crear y configurar la base de datos.
-- `IdeaDAmelio.pdf`: Documento que describe detalladamente la base de datos, incluyendo un diagrama de entidad-relación.
+- `IdeaDAmelioEntrega1.sql`: Script SQL que crea la base de datos, las tablas base y relaciones del sistema (Primera Entrega).
+- `IdeaDAmelioEntrega2.sql`: Implementa vistas, funciones, procedimientos almacenados y triggers (Segunda Entrega).
+- `IdeaDAmelio_Insercion_Datos.sql`: Carga datos de prueba y ejecuta pruebas de verificación.
+- `Entrega2_D'Amelio.pdf`: Documento técnico en PDF con la descripción detallada del proyecto.
 
 ## Tecnología Utilizada
 - **MySQL**: Se utiliza para todas las operaciones de base de datos, aprovechando sus capacidades para manejar relaciones complejas y grandes volúmenes de datos.
 
 ## Instalación y Uso
 1. Instale MySQL en su sistema si aún no lo ha hecho.
-2. Ejecute el script `IdeaDAmelio.sql` para crear la base de datos y sus componentes.
-3. Utilice la base de datos para gestionar y analizar la información de la academia de fútbol.
+2. Ejecute el script `IdeaDAmelioEntrega1.sql` para crear las tablas y relaciones.
+3. Ejecute `IdeaDAmelioEntrega2.sql` para generar vistas, funciones, procedimientos y triggers.
+4. Ejecute `IdeaDAmelio_Insercion_Datos.sql` para cargar datos de prueba y validar el funcionamiento.
+5. Utilice la base de datos para consultar, registrar y analizar la información de la academia de fútbol.
 
 ## Contacto
 Para preguntas o soporte adicional, puede contactar a: Bikina18
