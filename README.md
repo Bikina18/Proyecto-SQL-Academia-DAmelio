@@ -11,8 +11,8 @@ El proyecto se centra en centralizar la información de jugadores, entrenamiento
 
 ## Contenidos del Repositorio
 - `IdeaDAmelioEntrega1.sql`: Script SQL que crea la base de datos, las tablas base y relaciones del sistema (Primera Entrega).
-- `IdeaDAmelioEntrega2.sql`: Implementa vistas, funciones, procedimientos almacenados y triggers (Segunda Entrega).
-- `IdeaDAmelio_Insercion_Datos.sql`: Carga datos de prueba y ejecuta pruebas de verificación.
+- `IdeaDAmelioEntrega2.sql`: Script SQL que implementa vistas, funciones, procedimientos almacenados y triggers (Segunda Entrega).
+- `IdeaDAmelio_Insercion_Datos.sql`: Script SQL que carga datos de prueba y ejecuta pruebas de verificación.
 - `Entrega2_D'Amelio.pdf`: Documento técnico en PDF con la descripción detallada del proyecto.
 
 ## Tecnología Utilizada
