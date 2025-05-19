@@ -20,7 +20,7 @@ El proyecto se centra en centralizar la información de jugadores, entrenamiento
 
 ## Instalación y Uso
 1. Instale MySQL en su sistema si aún no lo ha hecho.
-2. Ejecute el script `IdeaDAmelioEntrega1.sql` para crear las tablas y relaciones.
+2. Ejecute el script `IdeaDAmelioEntrega1.sql` para crear la base de datos, las tablas y relaciones.
 3. Ejecute `IdeaDAmelioEntrega2.sql` para generar vistas, funciones, procedimientos y triggers.
 4. Ejecute `IdeaDAmelio_Insercion_Datos.sql` para cargar datos de prueba y validar el funcionamiento.
 5. Utilice la base de datos para consultar, registrar y analizar la información de la academia de fútbol.
