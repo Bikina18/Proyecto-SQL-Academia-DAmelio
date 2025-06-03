@@ -269,6 +269,26 @@ SELECT * FROM Finanzas_Egresos
 ORDER BY Fecha_egreso DESC;
 
 -- TRIGGER
+-- Se eliminará un ingreso y egreso para verificar el correcto funcionamiento de Trigger 3 y 4.
+
+DELETE FROM Finanzas_Ingresos
+WHERE Id_Ingreso = 1;
+
+DELETE FROM Finanzas_Egresos
+WHERE Id_Egreso = 1;
+
 -- Verificacion del funcionamiento tabla auditoria contable
 SELECT * FROM Auditoria_Contable
 ORDER BY Fecha_Registro DESC;
+
+-- Creación e ingresos de usuarios al sistema (tabala 15)
+-- Insertar usuarios del sistema
+INSERT INTO Usuarios_Sistema (Nombre_Usuario, Correo, Rol)
+VALUES
+('Bianca D’Amelio', 'root@localhost', 'Administrador'),
+('Carlos Reyes', 'contabilidad@academia.com', 'Contador'),
+('Laura Gómez', 'asistente@academia.com', 'AsistenteAdministrativo');
+
+-- Visualizar tabla 15 Usuarios del sistema
+SELECT * FROM Usuarios_Sistema
+ORDER BY Nombre_Usuario ASC;

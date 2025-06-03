@@ -333,7 +333,7 @@ DELIMITER ;
 -- - trg_auditoria_egreso:  AFTER INSERT en Finanzas_Egresos
 -- ===================================================================================================================================
 
--- Se crea la tabla Auditoria contable, donde se llevara el hisotrial detallado de los movimientos
+-- Se crea la tabla 14 Auditoria contable, donde se llevara el hisotrial detallado de los movimientos
 CREATE TABLE Auditoria_Contable (
     Id_Auditoria INT AUTO_INCREMENT PRIMARY KEY,
     Tipo_Operacion ENUM('Ingreso', 'Egreso'),
@@ -376,3 +376,50 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+-- Trigger 3: : registros de eliminación de ingresos contables
+DELIMITER //
+
+CREATE TRIGGER trg_auditoria_delete_ingreso
+AFTER DELETE ON Finanzas_Ingresos
+FOR EACH ROW
+BEGIN
+    INSERT INTO Auditoria_Contable (
+        Tipo_Operacion, Id_Operacion, Descripcion, Monto, Fecha_Operacion, Usuario
+    )
+    VALUES (
+        'Ingreso', OLD.Id_Ingreso, CONCAT('[ELIMINADO] ', OLD.Descripcion), OLD.Monto, OLD.Fecha_ingreso, CURRENT_USER()
+    );
+END;
+//
+
+DELIMITER ;
+
+-- Trigger 4: registros de eliminación de egresos contables
+DELIMITER //
+
+CREATE TRIGGER trg_auditoria_delete_egreso
+AFTER DELETE ON Finanzas_Egresos
+FOR EACH ROW
+BEGIN
+    INSERT INTO Auditoria_Contable (
+        Tipo_Operacion, Id_Operacion, Descripcion, Monto, Fecha_Operacion, Usuario
+    )
+    VALUES (
+        'Egreso', OLD.Id_Egreso, CONCAT('[ELIMINADO] ', OLD.Descripcion), OLD.Monto, OLD.Fecha_egreso, CURRENT_USER()
+    );
+END;
+//
+
+DELIMITER ;
+
+-- CREACION DE USUARIOS
+-- Primero se crea la Tabla 15: Usuarios_Sistema, quienes alimnetaran el sistema
+CREATE TABLE Usuarios_Sistema (
+    Id_Usuario INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_Usuario VARCHAR(50),
+    Correo VARCHAR(100),
+    Rol ENUM('Administrador', 'Contador', 'AsistenteAdministrativo'),
+    Activo BOOLEAN DEFAULT TRUE
+);
+

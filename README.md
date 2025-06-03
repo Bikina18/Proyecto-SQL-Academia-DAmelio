@@ -13,10 +13,13 @@ El proyecto se centra en centralizar la información de jugadores, entrenamiento
 - `IdeaDAmelioEntrega1.sql`: Script SQL que crea la base de datos, las tablas base y relaciones del sistema (Primera Entrega).
 - `IdeaDAmelioEntrega2.sql`: Script SQL que implementa vistas, funciones, procedimientos almacenados y triggers (Segunda Entrega).
 - `IdeaDAmelio_Insercion_Datos.sql`: Script SQL que carga datos de prueba y ejecuta pruebas de verificación.
-- `Entrega2_D'Amelio.pdf`: Documento técnico en PDF con la descripción detallada del proyecto.
+- `IdeaDAmelio.pdf`: Documento técnico en PDF con la descripción detallada del proyecto.
 
 ## Tecnología Utilizada
-- **MySQL**: Se utiliza para todas las operaciones de base de datos, aprovechando sus capacidades para manejar relaciones complejas y grandes volúmenes de datos.
+- **MySQL Workbench 8.0**: Creación, gestión y prueba de la base de datos relacional.
+- **Power BI Desktop**: Visualización de datos y generación de dashboards dinámicos para el documento técnico del proyecto.
+- **Visual Studio Code**: Soporte para organizar scripts y subir el proyecto a GitHub.
+- **GitHub**: Almacenamiento y control de versiones del proyecto.
 
 ## Instalación y Uso
 1. Instale MySQL en su sistema si aún no lo ha hecho.

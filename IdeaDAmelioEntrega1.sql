@@ -140,4 +140,3 @@ CREATE TABLE Finanzas_Egresos (
     FOREIGN KEY (Id_Conceptos_Egresos) REFERENCES Conceptos_Egresos(Id_Conceptos_Egresos)
 );
 
-
